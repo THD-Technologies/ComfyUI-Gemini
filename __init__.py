@@ -6,11 +6,14 @@ import __main__
 import json
 
 python = sys.executable
+cwd = os.getcwd()
 
-
-extentions_folder = os.path.join(os.path.dirname(os.path.realpath(__main__.__file__)),
+# extentions_folder = os.path.join(os.path.dirname(os.path.realpath(__main__.__file__)),
+#                                  "web" + os.sep + "extensions" + os.sep + "Gemini_Zho")
+# javascript_folder = os.path.join(os.path.dirname(os.path.realpath(__file__)), "js")
+extentions_folder = os.path.join(f"{cwd}/content/ComfyUI/custom_nodes/ComfyUI-Gemini",
                                  "web" + os.sep + "extensions" + os.sep + "Gemini_Zho")
-javascript_folder = os.path.join(os.path.dirname(os.path.realpath(__file__)), "js")
+javascript_folder = os.path.join(f"{cwd}/content/ComfyUI/custom_nodes/ComfyUI-Gemini", "js")
 
 if not os.path.exists(extentions_folder):
     print('Making the "web\extensions\Gemini_Zho" folder')
