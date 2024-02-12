@@ -17,7 +17,7 @@ javascript_folder = os.path.join(f"{cwd}/content/ComfyUI/custom_nodes/ComfyUI-Ge
 
 if not os.path.exists(extentions_folder):
     print('Making the "web\extensions\Gemini_Zho" folder')
-    os.mkdir(extentions_folder)
+    os.makedirs(extentions_folder)
 
 result = filecmp.dircmp(javascript_folder, extentions_folder)
 
